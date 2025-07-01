@@ -5,3 +5,15 @@ getRandomIntInclusive = (min, max) => {
   const maxFloored = Math.floor(max);
   return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
 };
+
+getComputerChoice = () => {
+  const n = getRandomIntInclusive(0, 2);
+
+  if (n === 0) {
+    return "rock";
+  } else if (n === 1) {
+    return "paper";
+  } else if (n === 2) {
+    return "scissors";
+  }
+};
