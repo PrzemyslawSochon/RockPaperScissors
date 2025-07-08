@@ -10,13 +10,13 @@ getRandomIntInclusive = (min, max) => {
 };
 
 getComputerChoice = () => {
-  const n = getRandomIntInclusive(0, 2);
+  const randomNumber = getRandomIntInclusive(0, 2);
 
-  if (n === 0) {
+  if (randomNumber === 0) {
     return "rock";
-  } else if (n === 1) {
+  } else if (randomNumber === 1) {
     return "paper";
-  } else if (n === 2) {
+  } else if (randomNumber === 2) {
     return "scissors";
   }
 };
