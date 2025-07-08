@@ -68,3 +68,23 @@ playRound = (computerChoice, humanChoice) => {
     }
   }
 };
+
+playGame = () => {
+  for (let i = 0; i < 5; ++i) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    playRound(computerSelection, humanSelection);
+    console.log(`Computer player score: ${computerScore}`);
+    console.log(`Human player score: ${humanScore}`);
+  }
+
+  if (computerScore === humanScore) {
+    console.log("A draw!");
+  } else if (computerScore > humanScore) {
+    console.log("Computer wins!");
+  } else if (computerScore < humanScore) {
+    console.log("Human wins!");
+  }
+  return;
+};
