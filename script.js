@@ -76,3 +76,5 @@ playGame = () => {
   }
   return;
 };
+
+playGame();
