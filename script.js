@@ -29,44 +29,32 @@ playRound = (computerChoice, humanChoice) => {
   humanChoice = humanChoice.toLowerCase();
   if (computerChoice === humanChoice) {
     console.log(`A draw! You both chose ${computerChoice}`);
-    return;
-  }
-  if (computerChoice === "rock") {
+  } else if (computerChoice === "rock") {
     if (humanChoice === "paper") {
       ++humanScore;
       console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-      return;
-    }
-    if (humanChoice === "scissors") {
+    } else if (humanChoice === "scissors") {
       ++computerScore;
       console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
-      return;
     }
-  }
-  if (computerChoice === "paper") {
+  } else if (computerChoice === "paper") {
     if (humanChoice === "rock") {
       ++computerScore;
       console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
-      return;
-    }
-    if (humanChoice === "scissors") {
+    } else if (humanChoice === "scissors") {
       ++humanScore;
       console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-      return;
     }
-  }
-  if (computerChoice === "scissors") {
+  } else if (computerChoice === "scissors") {
     if (humanChoice === "rock") {
       ++humanScore;
       console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-      return;
-    }
-    if (humanChoice === "paper") {
+    } else if (humanChoice === "paper") {
       ++computerScore;
       console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
-      return;
     }
   }
+  return;
 };
 
 playGame = () => {
